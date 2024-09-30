@@ -4,12 +4,12 @@
 #include <WiFiClientSecure.h>
 
 // Define WiFi credentials
-#define ssid "SSID"
-#define password "PASSWORD"
+#define ssid "WIFI-LITE"
+#define password "LITE@IOT"
 
 // Define server details and file path
 #define HOST "raw.githubusercontent.com"
-#define PATH "/adityabangde/ESP32-OTA-Update-via-GitHub/dev/ota_code.bin"
+#define PATH "/gsm-lab/ota_github/main/ota.ino.bin"
 #define PORT 443
 
 // Define the name for the downloaded firmware file
