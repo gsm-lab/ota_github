@@ -2,10 +2,11 @@
 #include <SPIFFS.h>
 #include "Update.h"
 #include <WiFiClientSecure.h>
+#include "cert.h"
 
 // Define WiFi credentials
-#define ssid "WIFI-LITE"
-#define password "LITE@IOT"
+  #define ssid "WIFI-LITE"
+  #define password "LITE@IOT"
 
 // Define server details and file path
 #define HOST "raw.githubusercontent.com"
@@ -49,10 +50,9 @@ void connectToWiFi() {
   Serial.println("WiFi connected");
 }
 
-
 void getFileFromServer() {
   WiFiClientSecure client;
-  client.setInsecure(); // Set client to allow insecure connections
+  client.setCACert(rootCACertificate);
 
   if (client.connect(HOST, PORT)) { // Connect to the server
     Serial.println("Connected to server");
