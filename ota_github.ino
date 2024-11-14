@@ -5,8 +5,8 @@
 #include "cert.h"
 
 // Define WiFi credentials
-  #define ssid "WIFI-LITE"
-  #define password "LITE@IOT"
+  #define ssid "******"
+  #define password "******"
 
 // Define server details and file path
 #define HOST "raw.githubusercontent.com"
